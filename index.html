@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon"
+        href="data:image/svg+xml;base64,PHN2ZyB0PSIxNjk3NzY0MjQ2NTgzIiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjU5MTkiIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIj48cGF0aCBkPSJNNjA3LjYgNzMwLjRjODYuMy03OC4yIDIwMC4xLTIwNy45IDIwMC4xLTM0Ny42QzgwNy42IDE4NSA2NzQuMyA5Ny45IDUxMi40IDk5Yy0xNjEuOC0xLjItMjk1LjIgMTI0LjQtMjk1LjIgMjgwLjQgMCAxNDMgMTEzLjcgMjczLjIgMjAwIDM1MS4yLTE0NC44IDEyLjItMjYwLjkgNTAuNy0yNjAuOSA5Ni4yQzE1Ni4zIDg4Mi4yIDMyNy44IDkyNyA1MTQgOTI3czM1Ny43LTQ0LjggMzU3LjctMTAwLjJjMC4xLTQ1LjgtMTE3LjctODQuNS0yNjQuMS05Ni40ek0yNzUuMSAzNzkuNWMxLTEyNy40IDEwOC44LTIyOS44IDI0MC45LTIyOC44IDEzMSAxLjkgMjM1LjcgMTA2IDIzMy43IDIzMi4zLTIgMTI2LjQtMTA5LjggMjI3LjItMjQwLjkgMjI1LjQtMTI5LjYtMS45LTIzMy43LTEwMy44LTIzMy43LTIyOC45eiBtMjM4LjkgNTE4Yy0xNDkuNSAwLTMwNS43LTMxLjctMzA1LjctNzAuNyAwLTMzLjQgMTE0LTYxLjMgMjQwLjQtNjguOCA3LjkgNi42IDE1LjMgMTIuNiAyMi4xIDE3LjktNDAuNiA0LjctNjkuMiAxNS42LTY5LjIgMjguMyAwIDE2LjggNTAuNCAzMC43IDExMi40IDMwLjcgNjIgMCAxMTIuNC0xMy43IDExMi40LTMwLjcgMC0xMy0zMC0yNC4yLTcyLjMtMjguNyA2LjctNS4zIDE0LTExLjMgMjEuOS0xNy44IDEyNy43IDcuMiAyNDMuNyAzNS40IDI0My43IDY4LjkgMC4xIDM5LjMtMTU2LjIgNzAuOS0zMDUuNyA3MC45eiBtMCAwIiBwLWlkPSI1OTIwIiBmaWxsPSIjMTI5NmRiIj48L3BhdGg+PHBhdGggZD0iTTMwOC41IDMyNi4ybC0wLjMgMC4zIDE4LjEgMTguMSAwLjMtMC4zYzI1LjMtMjUuMyA1NC43LTQ0LjggODcuNi01OC4yIDE1LjgtNi40IDMyLjMtMTEuMyA0OS4xLTE0LjUgMTYuNi0zLjIgMzMuNi00LjggNTAuNi00LjhzMzQgMS42IDUwLjYgNC44YzE2LjggMy4yIDMzLjMgOC4xIDQ5LjEgMTQuNSAzMS44IDEyLjkgNjAuNSAzMS43IDg1LjMgNTUuOWwxOC4xLTE4LjFjLTExMy44LTExMS0yOTUuOS0xMTAuMy00MDguNSAyLjN6IiBwLWlkPSI1OTIxIiBmaWxsPSIjMTI5NmRiIj48L3BhdGg+PHBhdGggZD0iTTM3OS4xIDM5Ni45bC0wLjMgMC4zIDE4LjEgMTguMWMwLjEtMC4xIDAuMi0wLjIgMC4zLTAuNCAxNS43LTE1LjcgMzQuMS0yNy45IDU0LjUtMzYuMiAxOS43LTggNDAuNi0xMi4xIDYyLTEyLjFzNDIuMyA0LjEgNjIgMTIuMWMxOS41IDcuOSAzNyAxOS4zIDUyLjIgMzRsMTguMS0xOC4xYy03NC40LTcyLjEtMTkzLjMtNzEuMy0yNjYuOSAyLjN6TTQ0OC42IDQ2Ni40Yy0wLjEgMC4xLTAuMiAwLjItMC4zIDAuNGw2Mi45IDYyLjkgNjUuNS02NS41Yy0zNi4yLTMzLjgtOTIuOS0zMy4xLTEyOC4xIDIuMnoiIHAtaWQ9IjU5MjIiIGZpbGw9IiMxMjk2ZGIiPjwvcGF0aD48L3N2Zz4="
+        type="image/x-icon">
+    <title>WIFI 批量定位</title>
+    <style>
+        html {
+            height: 100%;
+        }
+
+        body {
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        .main {
+            display: flex;
+            position: relative;
+            flex-direction: row;
+            height: 100%;
+        }
+
+        .left,
+        .right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            border: 3px solid teal;
+            margin: 10px;
+        }
+
+        .api-bar {
+            display: flex;
+            margin: 1em 0;
+        }
+
+        #url {
+            flex: 1;
+            margin-right: 10px;
+        }
+
+        #api-select {
+            padding: 3px 16px;
+        }
+
+        .action-bar {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+        }
+
+        code {
+            padding: 3px 5px;
+            margin: 0 5px;
+            border-radius: 4px;
+            color: whitesmoke;
+            background-color: #1e1e1e;
+        }
+
+        #clear {
+            padding: 3px 16px;
+        }
+
+        #analyze {
+            padding: 3px 16px;
+            border: 2px solid #666;
+            background-color: lightblue;
+        }
+
+        #analyze:hover {
+            background-color: steelblue;
+        }
+
+        textarea {
+            width: 100%;
+            height: 100%;
+            background-color: #eee;
+        }
+
+        .mask {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .mask .mask-msg {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            font-weight: bold;
+            color: #eee;
+            transform: translate(-50%, -50%);
+        }
+
+        .mask .mask-icon {
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            margin-right: 5px;
+            border: 2px dashed #eee;
+            border-radius: 50%;
+            vertical-align: bottom;
+            animation: loading 3s linear infinite;
+        }
+
+        @keyframes loading {
+            0% {
+                transform: rotate(0);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <fieldset class="left">
+            <legend>Networks</legend>
+            <div class="api-bar">
+                <input type="text" id="url" placeholder="粘贴或选择获取定位的 api url（需要 BSSID 能拼接到最后）">
+                <select id="api-select" onchange="apiSelectChange(event)">
+                    <option value="http://api.cellocation.com:84/wifi/?output=json&mac=" selected>api1</option>
+                    <option value="https://api.mylnikov.org/geolocation/wifi?v=1.1&data=open&bssid=">api2</option>
+                </select>
+            </div>
+            <div class="action-bar">
+                <div>粘贴<code>netsh wlan show networks mode=bssid</code>的输出：</div>
+                <div>
+                    <button id="clear" style="display: none;" onclick="clearInput(this)">清空</button>
+                    <button id="analyze" onclick="analyze()">分析</button>
+                </div>
+            </div>
+            <textarea id="input" autofocus placeholder="
+SSID 1 : XXXX
+    Network type            : 结构
+    身份验证                : WPA2 - 个人
+    加密                    : CCMP 
+    BSSID 1                 : 00:5c:ff:ff:ff:ff
+        信号             : 100%  
+        无线电类型         : 802.11ac
+        波段               : 5 GHz
+        频道            : 153 
+        基本速率(Mbps)     : 6 12 24
+        其他速率(Mbps)     : 9 18 36 48 54
+            "></textarea>
+        </fieldset>
+        <fieldset class="right">
+            <legend>Output</legend>
+            <textarea id="output" readonly></textarea>
+        </fieldset>
+
+        <div class="mask" id="mask" style="display: none;">
+            <div class="mask-msg">
+                <span class="mask-icon"></span>分析中......
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('url').value = document.getElementById('api-select').value;
+
+        const corsUrl = 'https://nextjs-cors-anywhere.vercel.app/api?endpoint=';
+        // const corsUrl = 'https://cors.zimjs.com/';
+
+        const mask = (function () {
+            const el = document.getElementById('mask');
+            return {
+                show: function () {
+                    el.style.display = 'block';
+                },
+                hide: function () {
+                    el.style.display = 'none';
+                }
+            }
+        })();
+
+        function apiSelectChange(event) {
+            document.getElementById('url').value = event.target.value;
+        }
+
+        function output(msg, focus = false) {
+            const elOutput = document.getElementById('output');
+            elOutput.value = msg;
+            if (focus) elOutput.focus();
+        }
+
+        function clearInput(el) {
+            const elInput = document.getElementById('input');
+            const elOutput = document.getElementById('output');
+
+            el.style.display = 'none';
+            elInput.value = '';
+            elOutput.value = '';
+            elInput.focus();
+        }
+
+        function analyze() {
+            const elUrl = document.getElementById('url');
+            const elAnalyze = document.getElementById('analyze');
+            const elClear = document.getElementById('clear');
+            const elInput = document.getElementById('input');
+            const elMask = document.getElementById('mask');
+            const url = elUrl.value.trim();
+            const input = elInput.value.trim();
+
+            if (!url) {
+                output('请输入获取定位的 api url !');
+                elUrl.focus();
+                return;
+            }
+
+            if (!input) {
+                output('请输入 Networks 列表！');
+                elInput.focus();
+                return;
+            }
+
+            const ssidArr = input.split(/\n(?=SSID \d)/);
+            const ssidData = [];
+            ssidArr.forEach(ssid => {
+                const ssidName = ssid.match(/(?<=SSID \d : ).*/);
+                const bssidArr = ssid.match(/(?<=BSSID.+: ).+/g);
+
+                if (bssidArr) {
+                    ssidData.push({
+                        ssidName,
+                        bssidArr,
+                    });
+                }
+            });
+
+            if (ssidData.length === 0) {
+                output('未能识别到 BSSID 字段，请检查输入！');
+                elClear.style.display = 'inline-block';
+                elInput.focus();
+                return;
+            }
+
+            mask.show();
+
+            Promise.all(ssidData.map(ssidObj => {
+                return Promise.all(ssidObj.bssidArr.map(bssid => {
+                    return fetch(corsUrl + url + bssid).then(res => res.text().then(txt => ({
+                        ssid: ssidObj.ssidName,
+                        bssid: bssid,
+                        address: txt,
+                    })));
+                }));
+            })).then(data => {
+                const result = data.map(addressArr => {
+                    return addressArr.map(item => {
+                        return `${item.ssid} : ${item.bssid}\n${item.address}`;
+                    }).join('\n');
+                }).join('\n\n');
+
+                output(result, true);
+                elClear.style.display = 'inline-block';
+                mask.hide();
+            }).catch(e => {
+                output(e, true);
+                mask.hide();
+            });
+        }
+    </script>
+</body>
+
+</html>
