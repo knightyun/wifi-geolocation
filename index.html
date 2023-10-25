@@ -23,6 +23,7 @@
             display: flex;
             position: relative;
             flex-direction: row;
+            flex-wrap: wrap;
             height: 100%;
         }
 
@@ -119,6 +120,12 @@
 
             100% {
                 transform: rotate(360deg);
+            }
+        }
+        @media screen and (max-width: 767px) {
+            a[target=_blank] {
+                top: 20px !important;
+                right: -60px !important;
             }
         }
     </style>
